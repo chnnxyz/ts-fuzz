@@ -19,7 +19,7 @@ defmodule Tsfuzz.MixProject do
   end
 
   # Run "mix help deps" to learn about dependencies.
-  defp deps do
+  def deps do
     [
       {:nx, "~> 0.5"}
     ]
