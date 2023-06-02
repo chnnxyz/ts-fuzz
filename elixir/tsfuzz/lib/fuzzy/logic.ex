@@ -9,45 +9,35 @@ defmodule Tsfuzz.Fuzzy.Logic.And do
   def and_lukasiewicz(a, b), do: max(0, a + b - 1)
 
   def and_drastic(a, b) do
-    t = fn _ ->
-      cond do
-        a == 1 ->
-          1
-        b == 1 ->
-          1
-        true ->
-          0
-      end
+    cond do
+      a == 1 ->
+        1
+      b == 1 ->
+        1
+      true ->
+        0
     end
-
-    t
   end
 
   def and_nilpotent_min(a, b) do
-    t = fn _ ->
-      cond do
-        a + b > 1 ->
-          min(a, b)
-        true ->
-          0
-      end
+
+    cond do
+      a + b > 1 ->
+        min(a, b)
+      true ->
+        0
     end
 
-    t
   end
 
   def and_hamacher(a, b) do
-    t = fn _ ->
-      cond do
-        a == b and a == 0 ->
-          0
+    cond do
+      a == b == 0 ->
+        0
 
-        true ->
-          a * b / (a + b - a * b)
-      end
+      true ->
+        a * b / (a + b - a * b)
     end
-
-    t
   end
 
 end
