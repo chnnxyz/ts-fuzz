@@ -14,6 +14,7 @@ defmodule Tsfuzz.Fuzzy.Membership do
       |> Nx.divide(-2)
       |> Nx.exp()
   end
-
-  def gaussian(_x, _c, s), do: raise(ArgumentError, "Standard deviation cannot be #{s}")
+  def gaussian(_x, _c, s) do
+    raise(ArgumentError, "Standard deviation cannot be #{s}")
+  end
 end

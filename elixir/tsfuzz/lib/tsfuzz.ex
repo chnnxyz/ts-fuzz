@@ -1,18 +1,5 @@
 defmodule Tsfuzz do
   @moduledoc """
-  Documentation for `Tsfuzz`.
+  Implements fuzzy logic for neuro-fuzzy systems for time series forecasting
   """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Tsfuzz.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
 end
